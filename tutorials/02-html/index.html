@@ -13,82 +13,80 @@
         <h1 draggable="true">HTML FOR US BY US</h1>
         <nav>
             <ul>
-                <li><a href="#apple">Apple</a></li>
-                <li><a href="#banana">Banana</a></li>
-                <li><a href="#orange">Orange</a></li>
+                <li><a href="#choice">Your Choice</a></li>
+                <li><a href="#apple">Apple Pie</a></li>
+                <li><a href="#banana">Banana Bread</a></li>
+                <li><a href="#orange">Orange Juice</a></li>
             </ul>
         </nav>
-        <div>
-            <img src="images/applepie.jpg" alt="An Applepie">
-            <img src="images/applepie.jpg" alt="An Applepie">
-        </div>
+    
     </header>
     <main>
+        <section id="choice">
+            <h2>Your Choice</h2>
+            <p>From the dropdown menu, please select which food you prefer the most</p>
+            <input list="subjects">
+            <datalist id="subjects">
+                <option>Burgers</option>
+                <option>Sushi</option>
+                <option>Soup</option>
+                <option>Tacos</option>
+                <option>Salads</option>
+                <option>Pizza</option>
+
+
+            </datalist>
+
+            <div>
+            <label for="myfile">Upload a picture of your favorite food here:</label> 
+            <input type="file" id="myfile" name="myfile">
+            </div>
+
+            <textarea id="story" name="story" rows="5" cols="33">
+Type in this text box the first time you declared your love for this favorite food.
+            </textarea>
+        </section>
+
         <section id="apple">
             <h2>APPLE PIE</h2>
-            <p>I like apple pie!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
+            <p>Use the slider to rate how much you enjoy this food</p>
+
+            <div>
+              <input type="range" id="volume" name="volume" min="0" max="11" />
+              <label for="volume">Yummy!!</label>
+            </div>
+
+            <div>
+                <img src="images/applepie.jpg" alt="An Applepie">
+            </div>
         </section>
+
         <section id="banana">
             <h2>BANANA BREAD</h2>
-            <p>I like banana bread!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
+            <p>Use the slider to rate how much you enjoy this food</p>
+
+            <div>
+              <input type="range" id="volume" name="volume" min="0" max="11" />
+              <label for="volume">Yummy!!</label>
+            </div>
+
+            <div>
+                <img src="images/bananabread.jpg" alt="An Applepie">
+            </div>
         </section>
+
         <section id="orange">
             <h2>ORANGE JUICE</h2>
-            <p>I like orange juice!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquid illo vero eius eveniet
-                perferendis? Dolore itaque pariatur non culpa, sint quaerat odit ex, nam, sunt autem veniam? Quia,
-                pariatur?</p>
+            <p>Use the slider to rate how much you enjoy this food</p>
+
+            <div>
+              <input type="range" id="volume" name="volume" min="0" max="11" />
+              <label for="volume">Yummy!!</label>
+            </div>
+
+            <div>
+                <img src="images/oj.jpg" alt="An Applepie">
+            </div>
         </section>
     </main>
     <footer>~~~~~</footer>
