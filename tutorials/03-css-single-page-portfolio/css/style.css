@@ -14,7 +14,7 @@ html {
 /* General CSS */
 
 body {
-    background-color: #a3a3a3;
+    background-color: #88a79f;
     font-family: sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -23,10 +23,9 @@ body {
 header {
     padding: 6rem;
     margin-bottom: 3rem;
-    background-color: rgb(93, 93, 93);
-    color: #eee;
-    border-bottom: #000 1px solid;
-    /* text-align: center; */
+    background-color: #1c4333;
+    color: #b2d7c8;
+    border-bottom: #0d1f17 1px solid;
 }
 
 header h1 {
@@ -41,7 +40,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #000;
+    color: #b2d7c8;
     display: inline-block;
     margin: 0 1rem;
 }
@@ -70,13 +69,10 @@ main {}
 
 .portfolio-item {
     margin-bottom: 5rem;
-    background-color: aquamarine;
+    background-color: #b49ab8;
     padding: 4rem;
     text-align: justify;
-    border: 2px #000 solid;
-    /* border-style: solid;
-    border-width: 13px;
-    border-color: #D2DB21 #8787C1 #00DA80 #D31996; */
+    border: 2px #7d517d solid;
     border-radius: .5rem;
     box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.2)
 }
@@ -97,15 +93,15 @@ main {}
 }
 
 .about-section {
-    background-color: #fff;
+    background-color: #a6c1b6;
 }
 
 .portfolio-section {
-    background-color: #dddddd;
+    background-color: #ecd7e7;
 }
 
 footer {
-    background-color: #333;
+    background-color: #0d1f17;
     color: #eee;
     padding: 1rem;
     text-align: end;
