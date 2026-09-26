@@ -1,0 +1,238 @@
+/* ~~~~~~~~~~~~~~~ color palette ~~~~~~~~~~~~~~~ */
+
+:root {
+    --bg-color-1: #000000;
+    --bg-color-2: #ecd7e7;
+    --font: #a5b5b0;
+    --accent-1: #b2d7c8;
+    --accent-2: #7d517d;
+    --dark: #1c4333;
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~ CSS resets ~~~~~~~~~~~~~~~ */
+
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+}
+
+/* make images responsive */
+img {
+    display: block;
+    max-width: 100%;
+
+}
+
+
+/* ~~~~~~~~~~~~~~~General CSS ~~~~~~~~~~~~~~~ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: (1.5rem);
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* text-align: justify; */
+}
+
+header {
+    padding: 5rem 2rem;
+    margin-bottom: 7rem;
+}
+
+header h1 {
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--font);
+    /* margin: 0 1rem; */
+    /* transition: all .5s ease; */
+}
+
+nav a:hover {
+    color: var(--accent-2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--font);
+    font-size: 3rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--font);
+        padding: 1rem;
+    }
+
+    .nav-menu a {
+        color: var(--bg-color-1);
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+
+    }
+}
+
+main {
+    margin: 0;
+}
+
+@media (max-width: 1030px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        margin: 1rem;
+    }
+}
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 70rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0;
+}
+
+.portfolio-item {
+    padding: 1rem;
+    background-color: var(--font);
+    color: var(--bg-color-1);
+    border-radius: .5rem;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+}
+
+.portfolio-item h3 {
+    font-size: 1.3rem;
+}
+
+.portfolio-item img {
+    border-radius: .5rem;
+}
+
+footer {
+    padding: 1rem 2rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 2.5rem;
+    margin: 0 .5rem;
+}
+
+@media (max-width: 750px) {
+    footer p {
+        font-size: 1.2rem;
+    }
+
+    footer img {
+        max-width: 2rem;
+        margin: 0 .2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    footer p {
+        font-size: 1rem;
+    }
+
+    footer img {
+        max-width: 1.5rem;
+        margin: 0 .1rem;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~flex styling ~~~~~~~~~~~~~~~~~~~ */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item-grid {
+    flex: 1 0 18.5rem;
+}
