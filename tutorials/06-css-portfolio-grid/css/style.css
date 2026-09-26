@@ -66,8 +66,7 @@ header {
 }
 
 header h1 {
-    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
-}
+    text-shadow: 4px 3px 0px #1c4333;}
 
 nav a {
     text-decoration: none;
