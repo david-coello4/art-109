@@ -1,12 +1,23 @@
 /* ~~~~~~~~~~~~~~~ color palette ~~~~~~~~~~~~~~~ */
 
 :root {
-    --bg-color-1: #000000;
+    /* --bg-color-1: #000000;
     --bg-color-2: #ecd7e7;
     --font: #a5b5b0;
     --accent-1: #b2d7c8;
     --accent-2: #7d517d;
+    --dark: #1c4333; */
+    --bg-color-1: #c3c3c3;
+    --bg-color-2: #ecd7e7;
+    --font: #000081;
+    --accent-1: #f5f5ff;
+    --accent-2: #818181;
     --dark: #1c4333;
+/* 
+    rgb(195, 195, 195)
+    rgb(9, 31, 67)
+    rgb(255, 255, 255)
+    rgb(0,0,129) */
 }
 
 
@@ -53,24 +64,33 @@ html {
 
 body {
     background-color: var(--bg-color-1);
-    color: var(--font);
+    color: var(--accent-1);
     font-size: (1.5rem);
-    line-height: 1.5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.75rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;    
     /* text-align: justify; */
 }
 
 header {
     padding: 5rem 2rem;
     margin-bottom: 7rem;
+    background-color: var(--font);
+    color: var(--accent-1);
+    border-bottom: #0d1f17 1px solid;
 }
 
 header h1 {
-    text-shadow: 4px 3px 0px #1c4333;}
+    text-shadow: 4px 3px 0px #1c4333;
+    font-family: "Press Start 2P", system-ui;
+}
+
 
 nav a {
     text-decoration: none;
-    color: var(--font);
+    color: var(--accent-1);
     /* margin: 0 1rem; */
     /* transition: all .5s ease; */
 }
@@ -162,13 +182,19 @@ main {
 .portfolio-content h2,
 .contact-content h2 {
     margin: 2rem 0;
+    padding: 1rem;
+    background-color: var(--font);
+    /* border-radius: 3rem; */
+    display: inline-block;
 }
 
 .portfolio-item {
     padding: 1rem;
-    background-color: var(--font);
-    color: var(--bg-color-1);
+    background-color: var(--accent-1);
+    color: var(--font);
+    border: 2px var(--accent-2) solid;
     border-radius: .5rem;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3)
 }
 
 .portfolio-item p {
@@ -235,3 +261,5 @@ footer img {
 .flex-item-grid {
     flex: 1 0 18.5rem;
 }
+
+  
