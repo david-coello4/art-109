@@ -11,8 +11,8 @@
     --bg-color-2: #ecd7e7;
     --font: #000081;
     --accent-1: #f5f5ff;
-    --accent-2: #818181;
-    --dark: #1c4333;
+    --accent-2: #8c8cc0;
+    --dark: #777777;
 /* 
     rgb(195, 195, 195)
     rgb(9, 31, 67)
@@ -64,7 +64,7 @@ html {
 
 body {
     background-color: var(--bg-color-1);
-    color: var(--accent-1);
+    color: var(--font);
     font-size: (1.5rem);
     line-height: 1.75rem;
     font-family: "Pixelify Sans", sans-serif;
@@ -83,7 +83,7 @@ header {
 }
 
 header h1 {
-    text-shadow: 4px 3px 0px #1c4333;
+    text-shadow: 4px 3px 0px #8c8cc0;
     font-family: "Press Start 2P", system-ui;
 }
 
@@ -109,7 +109,7 @@ nav a:hover {
     display: none;
     background: none;
     border: none;
-    color: var(--font);
+    color: var(--accent-1);
     font-size: 3rem;
 }
 
@@ -143,10 +143,12 @@ nav a:hover {
         flex-direction: column;
         background-color: var(--font);
         padding: 1rem;
+        border: 2px var(--accent-2) solid;
+        border-radius: .5rem;
     }
 
     .nav-menu a {
-        color: var(--bg-color-1);
+        color: var(--accent-1);
     }
 
     header {
@@ -184,6 +186,7 @@ main {
     margin: 2rem 0;
     padding: 1rem;
     background-color: var(--font);
+    color: var(--accent-1);
     /* border-radius: 3rem; */
     display: inline-block;
 }
@@ -192,17 +195,17 @@ main {
     padding: 1rem;
     background-color: var(--accent-1);
     color: var(--font);
-    border: 2px var(--accent-2) solid;
+    border: 2px var(--dark) solid;
     border-radius: .5rem;
     box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.3)
 }
 
 .portfolio-item p {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .portfolio-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .portfolio-item img {
@@ -210,7 +213,10 @@ main {
 }
 
 footer {
+    background-color: var(--font);
+    color: var(--accent-1);
     padding: 1rem 2rem;
+    text-align: end;
 }
 
 footer img {
