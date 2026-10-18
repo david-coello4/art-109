@@ -57,8 +57,8 @@
   white-space: normal;
   color: var(--font);
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-family: sans-serif;
+  background-color: rgba(195, 195, 195, 0.6);
+  font-family: "Pixelify Sans", sans-serif;
 }
 #baguetteBox-overlay .full-image:before {
   content: "";
