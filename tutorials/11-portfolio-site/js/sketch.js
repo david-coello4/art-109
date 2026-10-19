@@ -55,10 +55,10 @@ function drawThing(_x, _y) {
     fill(56, 41, 49);
     triangle(_x, _y, 30, -10);
 
-  //stem
-    strokeWeight(0);
-    fill(56, 41, 49);
-    triangle(_x, _y, 3200, -3200, 4000, -4000);
+//   //stem
+//     strokeWeight(0);
+//     fill(56, 41, 49);
+//     triangle(_x, _y, 3200, -3200, 4000, -4000);
 
 }
 
