@@ -1,12 +1,12 @@
 let canvas;
 let xPos = 0;
 let yPos = 0;
-let easing = .05;
+let easing = .5;
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
-    canvas.style("z-index", 0);
+    canvas.style("z-index", -1);
     background(225);
 }
 
@@ -31,9 +31,35 @@ function draw() {
 // }
 
 function drawThing(_x, _y) {
+    // strokeWeight(0);
+    // fill(random(200,255), random(200,255), random(200,255));
+    // ellipse(_x, _y, 30, 30);
+
+    //flower pedal
     strokeWeight(0);
-    fill(random(200,255), random(200,255), random(200,255));
-    ellipse(_x, _y, 30, 30);
+    fill(151, 29, 55);
+    ellipse(_x, _y, 30, 75);
+
+  //flower pedal
+    strokeWeight(0);
+    fill(151, 29, 55);
+    ellipse(_x, _y, 75, 25);
+
+   //pistil
+    strokeWeight(1);
+    fill(205, 65, 95);
+    ellipse(_x, _y, 15, 15);
+  
+    //stem
+    strokeWeight(0);
+    fill(56, 41, 49);
+    triangle(_x, _y, 30, -10);
+
+//   //stem
+//     strokeWeight(0);
+//     fill(56, 41, 49);
+//     triangle(_x, _y, 600, 600, 700, 700);
+
 }
 
 
