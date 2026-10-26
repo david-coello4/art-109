@@ -4,3 +4,16 @@
     top: 10px;
     left: 30px;
 }
+
+.drink-water-div {
+    position: relative;
+    margin: 50px auto;
+    max-width: 600px;
+    font-size: 3rem;
+}
+
+.flowers-gif {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}

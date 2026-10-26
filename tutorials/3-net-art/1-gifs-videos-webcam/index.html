@@ -15,10 +15,34 @@
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <img src="media/feesh.gif" alt="fish-swim"
-            class="fish-swim">
+        <img src="media/feesh.gif" alt="fish-swim" class="fish-swim">
+        <div class="drink-water-div">
+            <p>how it feels to drink water at 4:35 am</p>
+            <img src="media/flowers.gif" alt="flowers" class="flowers-gif">
+        </div>
+        <!-- autoplay video -->
+        <video width="360" height="640" autoplay muted loop>
+            <source src="media/sky.mp4" type="video/mp4">
+        </video>
+        <!-- hover videos -->
+        <video class="hover-video" width="360" height="640" muted loop>
+            <source src="media/sky.mp4" type="video/mp4">
+        </video>
+        <video class="hover-video" width="360" height="640" muted loop>
+            <source src="media/sky.mp4" type="video/mp4">
+        </video>
+        <!-- click on play video -->
+        <video class="click-video" width="360" height="640" muted loop>
+            <source src="media/sky.mp4" type="video/mp4">
+        </video>
+
+        <video id="webcam" autoplay playsinline></video>
     </main>
 
+
+
+    <script src="js/video.js"></script>
+    <script src="js/webcam.js"></script>
 </body>
 
 </html>
