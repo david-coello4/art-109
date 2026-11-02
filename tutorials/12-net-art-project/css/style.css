@@ -1,0 +1,35 @@
+/* ~~~~~~~~~~~~~~~ color palette ~~~~~~~~~~~~~~~ */
+
+:root {
+    --bg-color-1: #c3c3c3;
+    --bg-color-2: #ecd7e7;
+    --font: #000081;
+    --accent-1: #ffffff; 
+    /* f5f5ff */
+    --accent-2: #8c8cc0;
+    --dark: #777777;
+}
+
+/* ~~~~~~~~~~~~~~~ main ~~~~~~~~~~~~~~~ */
+
+
+.fish-swim {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.drink-water-div {
+    position: relative;
+    margin: 50px auto;
+    max-width: 600px;
+    font-size: 3rem;
+    color: var(--accent-1);
+
+}
+
+.flowers-gif {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
