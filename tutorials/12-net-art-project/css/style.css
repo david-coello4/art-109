@@ -13,10 +13,40 @@
 /* ~~~~~~~~~~~~~~~ main ~~~~~~~~~~~~~~~ */
 
 
-.fish-swim {
+.microphone {
     position: absolute;
-    top: 10px;
-    left: 30px;
+    top: 40px;
+    left: 50px;
+    width: 30rem;
+    height: 20rem;
+    /* size: 50rem; */
+}
+
+.deadline{
+    position: absolute;
+    top: 500px;
+    left: 50px;
+    width: 30rem;
+    height: 20rem;
+    /* size: 50rem; */
+}
+
+.register-class {
+    position: absolute;
+    top: 500px;
+    left: 1000px;
+    width: 30rem;
+    height: 20rem;
+    /* size: 50rem; */
+}
+
+.test {
+    position: absolute;
+    top: 40px;
+    left: 1000px;
+    width: 30rem;
+    height: 20rem;
+    /* size: 50rem; */
 }
 
 .drink-water-div {
