@@ -1,8 +1,8 @@
+
 let objX, objY;
 let obj2X, obj2Y;
 let maxDistance = 200;
 let dragging = false;
-let img;
 
 let canvas;
 let xPos = 0;
@@ -12,165 +12,141 @@ let shakeAmount = 0;
 const maxShake = 10;
 const decayFactor = 0.9;
 
-// function preload() {
-//     img = loadImage("../media/classes.jpg");
-// }
 
-function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
-    canvas.style("z-index", -1);
+let heart;
+let microphone;
+let classes;
+let test;
+let deadline;
 
-    objX = 100;
-    objY = 200;
-  
-    obj2X = 300;
-    obj2Y = 200;
 
+async function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style("z-index", -1);
+
+  textbox = createInput('Type one of your anxiety/fear here');
+  textbox.size(200, 50);
+  textbox.position(-400 + width / 2, -300 + height / 2);
+
+  textbox = createInput('Type one of your anxiety/fear here');
+  textbox.size(200, 50);
+  textbox.position(100 + width / 2, 200 + height / 2);
+
+
+  textbox = createInput('Type one of your anxiety/fear here');
+  textbox.size(200, 50);
+  textbox.position(-600 + width / 2, 150 + height / 2);
+
+  textbox = createInput('Type one of your anxiety/fear here');
+  textbox.size(200, 50);
+  textbox.position(400 + width / 2, -200 + height / 2);
+
+
+  heart = await loadImage("../12-net-art-project/media/heart.png");
+  microphone = await loadImage("../12-net-art-project/media/microphone.jpg");
+  classes = await loadImage("../12-net-art-project/media/classes.jpg");
+  test = await loadImage("../12-net-art-project/media/test.jpg");
+  deadline = await loadImage("../12-net-art-project/media/deadline.jpeg");
+
+  objX = width / 2;
+  objY = height / 2;
+
+  obj2X = 300;
+  obj2Y = 200;
 
 }
 
-
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight);
+
+  objX = width / 2;
+  objY = height / 2;
 }
 
 function draw() {
-    clear();
-    background(0);
+  clear();
+  background(0);
 
-    let d = dist(objX, objY, obj2X, obj2Y);
 
-  if (d < maxDistance) {
-    shakeAmount = map(d, 0, maxDistance, 15, 0);
+  xPos = xPos + ((mouseX - xPos) * easing);
+  yPos = yPos + ((mouseY - yPos) * easing);
+
+  let micDistance = dist(objX, objY, -500 + width / 2, -100 + height / 2);
+
+  let classesDistance = dist(objX, objY, 500 + width / 2, 100 + height / 2);
+
+  let testDistance = dist(objX, objY, 200 + width / 2, -300 + height / 2);
+
+  let dlDistance = dist(objX, objY, -200 + width / 2, 300 + height / 2);
+
+  let text1Distance = dist(objX, objY, -300 + width / 2, -200 + height / 2);
+
+  let text2Distance = dist(objX, objY, 200 + width / 2, 200 + height / 2);
+
+  let text3Distance = dist(objX, objY, -500 + width / 2, 150 + height / 2);
+
+  let text4Distance = dist(objX, objY, 500 + width / 2, -200 + height / 2);
+
+
+
+
+  if (micDistance < maxDistance ||
+    classesDistance < maxDistance ||
+    testDistance < maxDistance ||
+    dlDistance < maxDistance ||
+    text1Distance < maxDistance ||
+    text2Distance < maxDistance ||
+    text3Distance < maxDistance ||
+    text4Distance < maxDistance) {
+
+    let closestDistance = min(micDistance, classesDistance, testDistance, dlDistance, text1Distance, text2Distance, text3Distance, text4Distance);
+
+    shakeAmount = map(closestDistance, 0, maxDistance, 25, 0);
+
+  } else {
+    shakeAmount = 0;
   }
 
- let offsetX = random(-shakeAmount, shakeAmount);
- let offsetY = random(-shakeAmount, shakeAmount);
 
 
- fill(255, 100, 100);
-  noStroke();
-  circle(objX + offsetX, objY + offsetY, 50);
-
-//   (objX + offsetX, objY + offsetY, 50);
+  let offsetX = random(-shakeAmount, shakeAmount);
+  let offsetY = random(-shakeAmount, shakeAmount);
 
 
-// fill(255, 0, 0);
-// strokeWeight(0);
-// ellipse(-27.5 + width/2, -62 + height/2, 80, 70);
-
-// fill(255, 0, 0);
-// ellipse(27.5 + width/2, -62 + height/2, 80, 70);
-
-// fill(255, 0, 0);
-// translate(width/2, -74 + height/2);
-// triangle(-65, 25, 0, 115, 65, 25);
+  image(microphone, -500 + width / 2, -100 + height / 2, 200, 150);
+  image(classes, 500 + width / 2, 100 + height / 2, 200, 150);
+  image(test, 200 + width / 2, -300 + height / 2, 200, 150);
+  image(deadline, -200 + width / 2, 300 + height / 2, 200, 150);
 
 
-  // Draw second object
-  fill(100, 100, 255);
-  circle(obj2X, obj2Y, 50);
+  imageMode(CENTER);
+  image(heart, objX + offsetX, objY + offsetY, 100, 100);
 
-  // Display information
-  fill(0);
-  text("Distance: " + nf(d, 1, 1), 20, 20);
-  text("Shake: " + nf(shakeAmount, 1, 1), 20, 40);
+
+  shakeAmount *= decayFactor;
+}
 
 
 
+function mousePressed() {
 
+  let d = dist(mouseX, mouseY, objX, objY);
 
-
-
-
-
-    xPos = xPos + ((mouseX - xPos) * easing);
-    yPos = yPos + ((mouseY - yPos) * easing);
-
-    drawThing(xPos, yPos);
-
-
-    let xOffset = random(-shakeAmount, shakeAmount);
-    let yOffset = random(-shakeAmount, shakeAmount);
-
-    translate(xOffset, yOffset);
-  
-    //~~~~~~~~~~~~~~~~~~~~~~heart shape~~~~~~~~~~~~~~~~~~~~~~~
-    fill(255, 0, 0);
-    strokeWeight(0);
-    ellipse(-27.5 + width/2, -62 + height/2, 80, 70);
-
-    fill(255, 0, 0);
-    ellipse(27.5 + width/2, -62 + height/2, 80, 70);
-
-    fill(255, 0, 0);
-    translate(width/2, -74 + height/2);
-    triangle(-65, 25, 0, 115, 65, 25);
-
-    
-    // Decay the shake amount over time
-    shakeAmount *= decayFactor;
+  if (d < 25) {
+    dragging = true;
   }
-  
-  function mousePressed() {
-    // Trigger shake effect
-    shakeAmount = maxShake;
-
-    // if (
-    //     mouseX > 150 &&
-    //     mouseX < 450 &&
-    //     mouseY > 150 &&
-    //     mouseY < 450
-    // ) {
-    //     showImage = !showImage;
-    // }
-
-    let d = dist(mouseX, mouseY, objX, objY);
-
-    if (d < 25) {
-      dragging = true;
-    }
 
 
 }
 
 function mouseDragged() {
-    if (dragging) {
-      objX = mouseX;
-      objY = mouseY;
-    }
+  if (dragging) {
+    objX = mouseX;
+    objY = mouseY;
   }
+}
 
-  function mouseReleased() {
-    dragging = false;
-  }
-
-
-
-
-
-function drawThing(_x, _y) {
-
-// //     //flower pedal
-// //     strokeWeight(0);
-// //     fill(151, 29, 55);
-// //     ellipse(_x, _y, 40, 85);
-
-// //   //flower pedal
-// //     strokeWeight(0);
-// //     fill(151, 29, 55);
-// //     ellipse(_x, _y, 85, 35);
-
-// //    //pistil
-// //     strokeWeight(1);
-// //     fill(205, 65, 95);
-// //     ellipse(_x, _y, 25, 25);
-  
-// //     //stem
-// //     strokeWeight(0);
-// //     fill(56, 41, 49);
-// //     rotate(0);
-// //     triangle(_x, _y,  10 + width/2 , height/2 ,  -10 + width/2, height/2);
-
+function mouseReleased() {
+  dragging = false;
 }

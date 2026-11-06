@@ -4,7 +4,7 @@
     --bg-color-1: #c3c3c3;
     --bg-color-2: #ecd7e7;
     --font: #000081;
-    --accent-1: #ffffff; 
+    --accent-1: #ffffff;
     /* f5f5ff */
     --accent-2: #8c8cc0;
     --dark: #777777;
@@ -22,7 +22,7 @@
     /* size: 50rem; */
 }
 
-.deadline{
+.deadline {
     position: absolute;
     top: 500px;
     left: 50px;
@@ -62,4 +62,34 @@
     position: absolute;
     top: 40px;
     left: 50px;
+}
+/*  */
+/* 
+.panel {
+    position: absolute;
+    top: 40px;
+    left: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Comic Sans MS";
+    background: orchid;
+    padding: 5px;
+    text-align: center
+} */
+
+.text {
+    width: 70px;
+    /* color: white; */
+}
+
+.text-middle {
+    position: absolute;
+    top: 300px;
+    left: 625px;
+
+    padding: 1rem;
+    color: var(--accent-1);
+    border-radius: .5rem;
+    
 }

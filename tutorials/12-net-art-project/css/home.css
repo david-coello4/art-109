@@ -1,0 +1,50 @@
+/* ~~~~~~~~~~~~~~~ color palette ~~~~~~~~~~~~~~~ */
+
+:root {
+    --bg-color-1: #c3c3c3;
+    --bg-color-2: #ecd7e7;
+    --font: #000081;
+    --accent-1: #ffffff;
+    /* f5f5ff */
+    --accent-2: #8c8cc0;
+    --dark: #777777;
+}
+
+/* ~~~~~~~~~~~~~~~ main ~~~~~~~~~~~~~~~ */
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    top: 40px;
+    left: 30px;
+    width: 10rem;
+    height: 3.5rem;
+  }
+  
+  .button a {
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(255, 255, 255); 
+  }
+  
+  .button:hover {
+    background-color: #aa0404;
+    color: white;
+  }
+  
+  .question {
+    position: absolute;
+    color: white;
+    font-size: 36px;
+    top: 300px;
+    left: 400px;
+    width: 50rem;
+    height: 20rem;
+    /* size: 50rem; */
+  }
