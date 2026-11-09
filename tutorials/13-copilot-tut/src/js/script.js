@@ -73,6 +73,10 @@ document.getElementById('random-image-button').addEventListener('click', functio
     randomImage.style.left = `${randomX}px`;
     randomImage.style.top = `${randomY}px`;
 
+    // Randomly assign a spin animation class
+    const spinClass = Math.random() > 0.5 ? 'spin-clockwise' : 'spin-counterclockwise';
+    randomImage.classList.add(spinClass);
+
     // Append the image to the body
     document.body.appendChild(randomImage);
 });
@@ -119,3 +123,22 @@ function createTrail(event) {
         trailImage.remove();
     }, 500); // Trail image disappears after 500ms
 }
+
+// Add event listener for the scroll event
+window.addEventListener('scroll', function () {
+    // Get the scroll position
+    const scrollTop = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Calculate the scroll percentage (0 to 1)
+    const scrollPercentage = scrollTop / documentHeight;
+
+    // Generate a shade of orange based on the reversed scroll percentage
+    // Hue ranges from 40 (lighter orange) to 20 (darker orange)
+    const hue = 40 - scrollPercentage * 20; // Adjust hue dynamically (reversed)
+    const saturation = 100; // Full saturation
+    const lightness = 50; // Medium lightness
+
+    // Set the background color using HSL
+    document.body.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+});

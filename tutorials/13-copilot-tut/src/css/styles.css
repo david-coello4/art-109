@@ -112,3 +112,31 @@ footer {
     z-index: 500;
     pointer-events: none; /* Prevent interaction with trail images */
 }
+/* Animation for spinning clockwise */
+@keyframes spin-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation for spinning counter-clockwise */
+@keyframes spin-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Apply the animation to random oranges */
+.random-orange.spin-clockwise {
+    animation: spin-clockwise 2s linear infinite; /* Continuous spinning */
+}
+
+.random-orange.spin-counterclockwise {
+    animation: spin-counterclockwise 2s linear infinite; /* Continuous spinning */
+}
