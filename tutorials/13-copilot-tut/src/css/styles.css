@@ -140,3 +140,22 @@ footer {
 .random-orange.spin-counterclockwise {
     animation: spin-counterclockwise 2s linear infinite; /* Continuous spinning */
 }
+/* Animation for spinning clockwise */
+@keyframes spin-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Remove the spinning animation for traveling oranges */
+.traveling-orange.spin-clockwise {
+    animation: none; /* Remove spinning animation */
+}
+
+/* Remove the traveling orange button styles */
+#traveling-orange-button {
+    display: none; /* Hide the button */
+}

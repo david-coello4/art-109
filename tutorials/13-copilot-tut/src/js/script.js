@@ -142,3 +142,41 @@ window.addEventListener('scroll', function () {
     // Set the background color using HSL
     document.body.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 });
+// // Function to create a traveling orange-fruit image
+// function createTravelingOrange() {
+//     // Create a new image element
+//     const travelingOrange = document.createElement('img');
+//     travelingOrange.src = '../images/orange-fruit.png';
+//     travelingOrange.alt = 'Traveling Orange';
+//     travelingOrange.classList.add('traveling-orange');
+
+//     // Set initial styles for the traveling orange
+//     travelingOrange.style.position = 'fixed';
+//     travelingOrange.style.left = '0px'; // Start from the left side
+//     travelingOrange.style.top = '50%'; // Fixed vertical position (middle of the page)
+//     travelingOrange.style.transform = 'translateY(-50%)'; // Center vertically
+//     travelingOrange.style.width = '50px'; // Fixed size
+//     travelingOrange.style.height = 'auto';
+//     travelingOrange.style.zIndex = '9999'; // Ensure it appears above everything
+
+//     // Add a spinning animation class
+//     travelingOrange.classList.add('spin-clockwise');
+
+//     // Append the traveling orange to the body
+//     document.body.appendChild(travelingOrange);
+
+//     // Animate the orange to move from left to right
+//     const travelDuration = 5000; // 5 seconds
+//     travelingOrange.style.transition = `left ${travelDuration}ms linear`;
+//     travelingOrange.style.left = `${window.innerWidth}px`; // Move to the right side of the screen
+
+//     // Remove the orange after the animation ends
+//     setTimeout(() => {
+//         travelingOrange.remove();
+//     }, travelDuration);
+// }
+
+// // Add event listener for the "Traveling Orange" button
+// document.getElementById('traveling-orange-button').addEventListener('click', function () {
+//     createTravelingOrange();
+// });
